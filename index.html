@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Akash Kondimoena — ServiceNow Developer | CSA & CAD Certified | 4+ Years Enterprise ITSM Experience" />
+  <title>Akash Kondimoena | ServiceNow Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="home">
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a aria-label='Akash Kondimoena Home' class='nav-logo' href='/'>
+        <span class="logo-badge" aria-hidden="true">AK</span>
+        <span class="logo-name">Akash <span class="accent">K.</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li role="none"><a class='nav-link' data-page='home' href='/' role='menuitem'>Home</a></li>
+        <li role="none"><a class='nav-link' data-page='about' href='/about' role='menuitem'>About</a></li>
+        <li role="none"><a class='nav-link' data-page='experience' href='/experience' role='menuitem'>Experience</a></li>
+        <li role="none"><a class='nav-link' data-page='techstack' href='/techstack' role='menuitem'>Tech Stack</a></li>
+        <li role="none"><a class='nav-link' data-page='education' href='/education' role='menuitem'>Education</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO — HOME
+  ══════════════════════════════════════════ -->
+  <main>
+    <section class="hero" aria-labelledby="hero-name">
+      <!-- Atmospheric layers -->
+      <div class="hero-bg"   aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-content">
+
+          <!-- Text Block -->
+          <div class="hero-text">
+            <p class="hero-greeting fade-in">Hello, I'm</p>
+
+            <h1 class="hero-name fade-in delay-1" id="hero-name">
+              Akash <span class="accent">Kondimoena</span>
+            </h1>
+
+            <h2 class="hero-role fade-in delay-2">ServiceNow Developer</h2>
+
+            <div class="hero-headline fade-in delay-2">
+              ServiceNow CSA &amp; CAD &nbsp;|&nbsp; ITSM Expert &nbsp;|&nbsp; Platform Architect
+            </div>
+
+            <p class="hero-tagline fade-in delay-3">
+              4+ years building enterprise-grade ITSM solutions. Certified in ServiceNow
+              System Administration and Application Development — driving efficiency through
+              automation, governance, and precision engineering.
+            </p>
+
+            <div class="hero-ctas fade-in delay-3">
+              <a class='btn btn-primary' href='/experience'>View Experience</a>
+              <a href="assets/Akash_Kondimoena_Resume.pdf" download class="btn btn-secondary">Download CV</a>
+            </div>
+
+            <div class="hero-badges fade-in delay-4">
+              <span class="cert-pill">✓ ServiceNow CSA</span>
+              <span class="cert-pill">✓ ServiceNow CAD</span>
+            </div>
+          </div>
+
+          <!-- Avatar Block -->
+          <div class="hero-avatar fade-in delay-2" aria-hidden="true">
+
+            <!-- Outer ring + orbit dots — THIS rotates -->
+            <div class="avatar-orbital">
+              <span class="orbit-node orbit-node-a"></span>
+              <span class="orbit-node orbit-node-b"></span>
+              <span class="orbit-node orbit-node-c"></span>
+            </div>
+
+            <!-- Photo layers — these DO NOT rotate -->
+            <div class="avatar-mid">
+              <div class="avatar-core">
+                <img src="assets/profile.jpg" alt="Akash Kondimoena — ServiceNow Developer" />
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="hero-stats fade-in delay-4" aria-label="Career highlights">
+          <div class="stat">
+            <span class="stat-num" data-target="4" data-suffix="+">0+</span>
+            <span class="stat-lbl">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="2">0</span>
+            <span class="stat-lbl">Certifications</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="2">0</span>
+            <span class="stat-lbl">Enterprises Served</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="6" data-suffix="+">0+</span>
+            <span class="stat-lbl">ITSM Modules</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER (injected by JS)
+  ══════════════════════════════════════════ -->
+  <footer class="site-footer" id="site-footer" role="contentinfo"></footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
