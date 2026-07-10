@@ -172,17 +172,11 @@ function initNavbar() {
 	onScroll(); // run once on load
 }
 
-
-
 // ====================================================================================================
-
-
-
 
 const toggle = document.getElementById("themeToggle");
 
 if (toggle) {
-
 	const savedTheme = localStorage.getItem("theme");
 
 	if (savedTheme === "light") {
@@ -205,7 +199,6 @@ if (toggle) {
 			toggle.innerHTML = "☀️";
 		}
 	};
-
 }
 /* ── HAMBURGER MENU ─────────────────────────────────────────── */
 function initHamburger() {
@@ -330,27 +323,31 @@ if (countdown) {
 		countdown.textContent = seconds;
 
 		if (seconds === 0) {
-      clearInterval(timer);
+			clearInterval(timer);
 			window.location.href = "./home.html";
 		}
-    console.log("Successfully redirected to Your Portfolio")
+		console.log("Successfully redirected to Your Portfolio");
 	}, 1000);
 }
 
-
 if (!sessionStorage.getItem("loaded")) {
-    sessionStorage.setItem("loaded", "true");
+	sessionStorage.setItem("loaded", "true");
 
-    let seconds = 3;
-    const countdown = document.getElementById("countdown");
+	let seconds = 3;
+	const countdown = document.getElementById("countdown");
 
-    const timer = setInterval(() => {
-        seconds--;
-        countdown.textContent = seconds;
+	const timer = setInterval(() => {
+		seconds--;
+		countdown.textContent = seconds;
 
-        if (seconds === 0) {
-            clearInterval(timer);
-            window.location.replace("home.html");
-        }
-    }, 1000);
+		if (seconds === 0) {
+			clearInterval(timer);
+			window.location.replace("home.html");
+		}
+	}, 1000);
+}
+
+const Reload = performance.getEntriesByType("navigation");
+if (Reload.length > 0 && Reload[0].type === "reload") {
+	window.location.href = "index.html";
 }
