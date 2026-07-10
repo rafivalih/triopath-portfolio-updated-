@@ -354,9 +354,3 @@ if (!sessionStorage.getItem("loaded")) {
         }
     }, 1000);
 }
-
-
-// const reloadingpage = performance.getEntriesByType("navigation");
-//   if (reloadingpage.length > 0 && reloadingpage[0].type === "reload") {
-//     window.location.href = "index.html";
-//   }
