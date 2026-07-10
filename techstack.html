@@ -1,16 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tech Stack of Akash Kondimoena — ServiceNow ITSM modules, development tools, automation, and governance expertise." />
-  <title>Tech Stack | Akash Kondimoena</title>
+  <meta name="description"
+    content="Akash Kondimoena — AI/ML Engineer | Generative AI | Machine Learning | NLP | LLMs | 4+ Years Experience" />
+  <title>Akash Kondimoena | AI/ML Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body data-page="techstack">
+
+<body data-page="home">
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a aria-label='Akash Kondimoena Home' class='nav-logo' href='/'>
+        <span class="logo-badge" aria-hidden="true">AK</span>
+        <span class="logo-name">Akash <span class="accent">K.</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <!-- <li role="none"><a class='nav-link' data-page='home' href='/' role='menuitem'>Home</a></li> -->
+        <li role="none"><a class='nav-link' data-page='home' href='/home.html' role='menuitem'>Home</a></li>
+        <li role="none"><a class='nav-link' data-page='about' href='/about.html' role='menuitem'>About</a></li>
+        <li role="none"><a class='nav-link' data-page='experience' href='/experience.html'
+            role='menuitem'>Experience</a>
+        </li>
+        <li role="none"><a class='nav-link' data-page='techstack' href='/techstack.html' role='menuitem'>Tech Stack</a>
+        </li>
+        <li role="none"><a class='nav-link' data-page='education' href='/education.html' role='menuitem'>Education</a>
+        </li>
+         <button id="themeToggle" class="theme-toggle">
+
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-sun-icon lucide-sun">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg> -->
+            🌙
+        </button>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO — HOME
+  ══════════════════════════════════════════ -->
+  <main>
+    <section class="hero" aria-labelledby="hero-name">
+      <!-- Atmospheric layers -->
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-content">
+
+          <!-- Text Block -->
+          <div class="hero-text">
+            <p class="hero-greeting fade-in">Hello, I'm</p>
+
+            <h1 class="hero-name fade-in delay-1" id="hero-name">
+              Akash <span class="accent">Kondimoena</span>
+            </h1>
+
+            <h2 class="hero-role fade-in delay-2">AI/ML Engineer</h2>
+
+            <div class="hero-headline fade-in delay-2">
+              Generative AI &amp; Machine Learning &nbsp;|&nbsp; LLMs &nbsp;|&nbsp; NLP
+            </div>
+
+            <p class="hero-tagline fade-in delay-3">
+            <p class="hero-tagline fade-in delay-3">
+              AI/ML Engineer with 4+ years of experience building scalable Artificial Intelligence,
+              Machine Learning, and Generative AI solutions. Skilled in Python, TensorFlow,
+              PyTorch, Scikit-learn, LLMs, NLP, LangChain, OpenAI, and cloud-based MLOps
+              to deliver intelligent enterprise applications.
+            </p>
+            </p>
+
+            <div class="hero-ctas fade-in delay-3">
+              <a class='btn btn-primary' href='/experience.html'>View Experience</a>
+              <a href="assets/Akash_AIML_Resume.pdf" download class="btn btn-secondary">Download CV</a>
+            </div>
+
+            <div class="hero-badges fade-in delay-4">
+              <span class="cert-pill">✓ Generative AI</span>
+              <span class="cert-pill">✓ Machine Learning</span>
+            </div>
+          </div>
+
+          <!-- Avatar Block -->
+          <div class="hero-avatar fade-in delay-2" aria-hidden="true">
+
+            <!-- Outer ring + orbit dots — THIS rotates -->
+            <div class="avatar-orbital">
+              <span class="orbit-node orbit-node-a"></span>
+              <span class="orbit-node orbit-node-b"></span>
+              <span class="orbit-node orbit-node-c"></span>
+            </div>
+
+            <!-- Photo layers — these DO NOT rotate -->
+            <div class="avatar-mid">
+              <div class="avatar-core">
+                <img src="assets/profile.jpg" alt="Akash Kondimoena — AI/ML Engineer" />
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        
 
   <!-- ── NAVBAR ─────────────────────────────────────────────── -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
@@ -19,12 +145,24 @@
         <span class="logo-badge" aria-hidden="true">AK</span>
         <span class="logo-name">Akash <span class="accent">K.</span></span>
       </a>
-      <ul class="nav-menu" id="navMenu" role="menubar">
+      <!-- <ul class="nav-menu" id="navMenu" role="menubar">
         <li role="none"><a class='nav-link' data-page='home' href='/' role='menuitem'>Home</a></li>
         <li role="none"><a class='nav-link' data-page='about' href='/about' role='menuitem'>About</a></li>
         <li role="none"><a class='nav-link' data-page='experience' href='/experience' role='menuitem'>Experience</a></li>
         <li role="none"><a class='nav-link' data-page='techstack' href='/techstack' role='menuitem'>Tech Stack</a></li>
         <li role="none"><a class='nav-link' data-page='education' href='/education' role='menuitem'>Education</a></li>
+      </ul> -->
+
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li role="none"><a class='nav-link' data-page='home' href='/' role='menuitem'>Home</a></li>
+        <li role="none"><a class='nav-link' data-page='about' href='/about.html' role='menuitem'>About</a></li>
+        <li role="none"><a class='nav-link' data-page='experience' href='/experience.html'
+            role='menuitem'>Experience</a>
+        </li>
+        <li role="none"><a class='nav-link' data-page='techstack' href='/techstack.html' role='menuitem'>Tech Stack</a>
+        </li>
+        <li role="none"><a class='nav-link' data-page='education' href='/education.html' role='menuitem'>Education</a>
+        </li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -38,7 +176,8 @@
     <section class="page-hero" aria-label="Page header">
       <p class="page-hero-label">Skills &amp; Expertise</p>
       <h1>Tech <span class="accent">Stack</span></h1>
-      <p>A comprehensive overview of ServiceNow platform capabilities, development tools, and governance frameworks I work with daily.</p>
+      <p>A comprehensive overview of AI, Machine Learning, Generative AI, MLOps, Cloud, and Data Engineering
+        technologies I use to build intelligent enterprise solutions.</p>
     </section>
 
     <!-- ── SKILLS CONTENT ─────────────────────────────────────── -->
@@ -46,27 +185,33 @@
       <div class="container">
 
         <span class="section-label">Capabilities</span>
-        <h2 class="section-title">Platform <span class="accent">Expertise</span></h2>
+        <h2 class="section-title">AI & ML <span class="accent"> Expertise</span></h2>
         <div class="section-divider"></div>
 
-        <!-- ── 1. ITSM Modules ───────────────────────────────── -->
+        <!-- ── 1. Programming & Machine Learning ───────────────────────────────── -->
         <div class="skill-section fade-in">
           <div class="skill-cat-header">
             <div class="skill-cat-icon g1" aria-hidden="true">🗂️</div>
             <div class="skill-cat-meta">
-              <p class="skill-cat-title">ServiceNow ITSM Modules</p>
-              <p class="skill-cat-desc">Core platform modules for enterprise IT service management</p>
+              <p class="skill-cat-title">Programming & Machine Learning</p>
+              <p class="skill-cat-desc">Core programming languages, machine learning frameworks, and model development
+                tools.</p>
             </div>
           </div>
           <div class="skill-pills" role="list">
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Incident Management</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Problem Management</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Change Management</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Request Fulfillment</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Release Management</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Knowledge Management</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Service Catalog</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>SLA &amp; OLA Management</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Python</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>SQL</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>PySpark</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Scikit-learn</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>TensorFlow</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>PyTorch</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Keras</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>XGBoost</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>LightGBM</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Feature Engineering</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Model Training</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Model Evaluation</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Hyperparameter Tuning</span>
           </div>
         </div>
 
@@ -75,20 +220,21 @@
           <div class="skill-cat-header">
             <div class="skill-cat-icon g2" aria-hidden="true">⚙️</div>
             <div class="skill-cat-meta">
-              <p class="skill-cat-title">Development &amp; Configuration</p>
-              <p class="skill-cat-desc">Platform scripting, workflows, and UI customisation tools</p>
+              <p class="skill-cat-title">Generative AI &amp; LLMs</p>
+              <p class="skill-cat-desc">Large Language Models, Prompt Engineering, and Retrieval-Augmented Generation.
+              </p>
             </div>
           </div>
           <div class="skill-pills" role="list">
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Business Rules</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Client Scripts</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>UI Policies</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>UI Actions</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Script Includes</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Flow Designer</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Workflow Editor</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Notifications &amp; Email Templates</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Form Configuration</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>OpenAI GPT</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>LLaMA</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Claude</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Gemini</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Prompt Engineering</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>RAG</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>LLM Integration</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>LangChain</span>
+            <!-- <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Form Configuration</span> -->
           </div>
         </div>
 
@@ -98,17 +244,18 @@
             <div class="skill-cat-icon g3" aria-hidden="true">📐</div>
             <div class="skill-cat-meta">
               <p class="skill-cat-title">Process &amp; Governance</p>
-              <p class="skill-cat-desc">ITIL-aligned implementation, approval workflows, and change governance</p>
+              <p class="skill-cat-desc">Natural Language Processing and text intelligence solutions.</p>
             </div>
           </div>
           <div class="skill-pills" role="list">
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>ITIL-Aligned Implementation</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Standard Change Models</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Normal Change Models</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Emergency Change Models</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Approval Workflows</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>CAB Support</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Priority &amp; Assignment Models</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Transformers</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>BERT</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Hugging Face</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Text Classification</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Named Entity Recognition</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Sentiment Analysis</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Semantic Search</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Text Summarization</span>
           </div>
         </div>
 
@@ -117,16 +264,16 @@
           <div class="skill-cat-header">
             <div class="skill-cat-icon g4" aria-hidden="true">🤖</div>
             <div class="skill-cat-meta">
-              <p class="skill-cat-title">Automation &amp; Orchestration</p>
-              <p class="skill-cat-desc">Workflow automation, task orchestration, and event-driven processes</p>
+              <p class="skill-cat-title">AI Frameworks &amp; Vector Databases</p>
+              <p class="skill-cat-desc">Frameworks and vector databases for enterprise AI applications.</p>
             </div>
           </div>
           <div class="skill-pills" role="list">
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Workflow Automation</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Flow Designer Actions</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Task Orchestration</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Event-Driven Notifications</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Approval &amp; Escalation Automation</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>LangChain</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Hugging Face</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Pinecone</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>FAISS</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>ChromaDB</span>
           </div>
         </div>
 
@@ -135,17 +282,20 @@
           <div class="skill-cat-header">
             <div class="skill-cat-icon g5" aria-hidden="true">📊</div>
             <div class="skill-cat-meta">
-              <p class="skill-cat-title">Reporting &amp; Monitoring</p>
-              <p class="skill-cat-desc">Operational dashboards, SLA tracking, and incident trend analysis</p>
+              <p class="skill-cat-title">Cloud &amp; MLOps</p>
+              <p class="skill-cat-desc">Cloud platforms, deployment, and MLOps technologies.</p>
             </div>
           </div>
           <div class="skill-pills" role="list">
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Operational Dashboards</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>ITSM Reports</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>SLA Tracking</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Incident Trend Analysis</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Backlog Monitoring</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Change Success Reporting</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>AWS</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Azure Machine Learning</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Google Vertex AI</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Docker</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Kubernetes</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>MLflow</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Apache Airflow</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>GitHub Actions</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>CI/CD</span>
           </div>
         </div>
 
@@ -154,15 +304,17 @@
           <div class="skill-cat-header">
             <div class="skill-cat-icon g6" aria-hidden="true">🔐</div>
             <div class="skill-cat-meta">
-              <p class="skill-cat-title">Security &amp; Access Control</p>
-              <p class="skill-cat-desc">Role-based access, ACL configuration, and data governance</p>
+              <p class="skill-cat-title">Data Engineering</p>
+              <p class="skill-cat-desc">Data engineering, APIs, and analytics technologies.</p>
             </div>
           </div>
           <div class="skill-pills" role="list">
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Role-Based Access Control (RBAC)</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>ACL Configuration</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>User &amp; Group Management</span>
-            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Data Access Controls</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>FastAPI</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>REST APIs</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Pandas</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>NumPy</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>Kafka</span>
+            <span class="skill-pill" role="listitem"><span class="pill-dot"></span>dbt</span>
           </div>
         </div>
 
@@ -171,7 +323,7 @@
           <div class="skill-cat-header">
             <div class="skill-cat-icon g7" aria-hidden="true">🛠️</div>
             <div class="skill-cat-meta">
-              <p class="skill-cat-title">Platform Support &amp; Collaboration</p>
+              <p class="skill-cat-title">Responsible AI &amp; Model Optimization</p>
               <p class="skill-cat-desc">Production support, upgrades, testing, and cross-team coordination</p>
             </div>
           </div>
@@ -197,4 +349,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

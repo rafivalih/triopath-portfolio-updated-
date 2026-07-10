@@ -6,39 +6,40 @@
 /* ── CANDIDATE CONFIG ──────────────────────────────────────────
    Update these values to customise the portfolio.              */
 const CANDIDATE = {
-  name:          'Akash Kondimoena',
-  role:          'ServiceNow Developer',
-  phone:         '17046574866',       // E.164 format (no + or spaces)
-  phoneDisplay:  '+1 704-657-4866',
-  email:         'akashkondimoena@gmail.com',
-  linkedin:      'https://www.linkedin.com/in/akash-kondimoena-6340132b1/',                 // ← Paste actual LinkedIn URL here
-  github:        '#',                 // ← Paste actual GitHub URL here
-  location:      'Chicago, IL, USA',  // determines copyright entity
-  cvFile:        'assets/Akash_Kondimoena_Resume.pdf',
-  whatsappMsg:   'Hi, I came across your profile and found your background interesting. We have an opportunity that aligns with your experience. Would you be open to discussing this further?',
+	name: "Akash Kondimoena",
+	role: "AI/ML Developer",
+	phone: "17046574866", // E.164 format (no + or spaces)
+	phoneDisplay: "+1 704-657-4866",
+	email: "akashkondimoena@gmail.com",
+	linkedin: "https://www.linkedin.com/in/akash-kondimoena-6340132b1/", // ← Paste actual LinkedIn URL here
+	github: "https://github.com/akashkondimoena",
+	location: "Chicago, IL, USA", // determines copyright entity
+	cvFile: "assets/Akash_AIML_Resume.pdf",
+	whatsappMsg:
+		"Hi, I came across your profile and found your background interesting. We have an opportunity that aligns with your experience. Would you be open to discussing this further?",
 };
 
 /* ── COPYRIGHT LOGIC ───────────────────────────────────────────
    India → Pvt Ltd  |  Anywhere else → LLC                     */
 function getCopyright() {
-  const isIndia = CANDIDATE.location.toLowerCase().includes('india');
-  const entity  = isIndia ? 'Triopath Careers Pvt Ltd' : 'Triopath Careers LLC';
-  const year    = new Date().getFullYear();
-  return `All rights reserved &copy; ${year} ${entity}`;
+	const isIndia = CANDIDATE.location.toLowerCase().includes("india");
+	const entity = isIndia ? "Triopath Careers Pvt Ltd" : "Triopath Careers LLC";
+	const year = new Date().getFullYear();
+	return `All rights reserved &copy; ${year} ${entity}`;
 }
 
 /* ── WHATSAPP URL ──────────────────────────────────────────── */
 function getWhatsAppURL() {
-  const msg = encodeURIComponent(CANDIDATE.whatsappMsg);
-  return `https://wa.me/${CANDIDATE.phone}?text=${msg}`;
+	const msg = encodeURIComponent(CANDIDATE.whatsappMsg);
+	return `https://wa.me/${CANDIDATE.phone}?text=${msg}`;
 }
 
 /* ── FOOTER RENDER ─────────────────────────────────────────── */
 function renderFooter() {
-  const el = document.getElementById('site-footer');
-  if (!el) return;
+	const el = document.getElementById("site-footer");
+	if (!el) return;
 
-  el.innerHTML = /* html */`
+	el.innerHTML = /* html */ `
     <div class="footer-wrap">
 
       <!-- Top bar: Download CV + Contact buttons -->
@@ -164,112 +165,198 @@ function renderFooter() {
 
 /* ── NAVBAR: scroll shadow ──────────────────────────────────── */
 function initNavbar() {
-  const nav = document.getElementById('navbar');
-  if (!nav) return;
-  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // run once on load
+	const nav = document.getElementById("navbar");
+	if (!nav) return;
+	const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 20);
+	window.addEventListener("scroll", onScroll, { passive: true });
+	onScroll(); // run once on load
 }
 
+
+
+// ====================================================================================================
+
+
+
+
+const toggle = document.getElementById("themeToggle");
+
+if (toggle) {
+
+	const savedTheme = localStorage.getItem("theme");
+
+	if (savedTheme === "light") {
+		document.documentElement.setAttribute("data-theme", "light");
+		toggle.innerHTML = "☀️";
+	} else {
+		toggle.innerHTML = "🌙";
+	}
+
+	toggle.onclick = () => {
+		const current = document.documentElement.getAttribute("data-theme");
+
+		if (current === "light") {
+			document.documentElement.removeAttribute("data-theme");
+			localStorage.setItem("theme", "dark");
+			toggle.innerHTML = "🌙";
+		} else {
+			document.documentElement.setAttribute("data-theme", "light");
+			localStorage.setItem("theme", "light");
+			toggle.innerHTML = "☀️";
+		}
+	};
+
+}
 /* ── HAMBURGER MENU ─────────────────────────────────────────── */
 function initHamburger() {
-  const btn  = document.getElementById('hamburger');
-  const menu = document.getElementById('navMenu');
-  if (!btn || !menu) return;
+	const btn = document.getElementById("hamburger");
+	const menu = document.getElementById("navMenu");
+	if (!btn || !menu) return;
 
-  btn.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    btn.classList.toggle('open', open);
-    btn.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
+	btn.addEventListener("click", () => {
+		const open = menu.classList.toggle("open");
+		btn.classList.toggle("open", open);
+		btn.setAttribute("aria-expanded", open);
+		document.body.style.overflow = open ? "hidden" : "";
+	});
 
-  // Close on link click
-  menu.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
+	// Close on link click
+	menu.querySelectorAll(".nav-link").forEach((link) => {
+		link.addEventListener("click", () => {
+			menu.classList.remove("open");
+			btn.classList.remove("open");
+			document.body.style.overflow = "";
+		});
+	});
 
-  // Close on outside click
-  document.addEventListener('click', e => {
-    if (!document.getElementById('navbar').contains(e.target) && menu.classList.contains('open')) {
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
+	// Close on outside click
+	document.addEventListener("click", (e) => {
+		if (
+			!document.getElementById("navbar").contains(e.target) &&
+			menu.classList.contains("open")
+		) {
+			menu.classList.remove("open");
+			btn.classList.remove("open");
+			document.body.style.overflow = "";
+		}
+	});
 }
 
 /* ── ACTIVE NAV LINK ────────────────────────────────────────── */
 function setActiveNav() {
-  const page = document.body.dataset.page;
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.classList.toggle('active', link.dataset.page === page);
-  });
+	const page = document.body.dataset.page;
+	document.querySelectorAll(".nav-link").forEach((link) => {
+		link.classList.toggle("active", link.dataset.page === page);
+	});
 }
 
 /* ── SCROLL-TRIGGERED ANIMATIONS ───────────────────────────── */
 function initAnimations() {
-  const elements = document.querySelectorAll('.fade-in, .tl-item');
+	const elements = document.querySelectorAll(".fade-in, .tl-item");
 
-  if (!('IntersectionObserver' in window)) {
-    elements.forEach(el => el.classList.add('visible'));
-    return;
-  }
+	if (!("IntersectionObserver" in window)) {
+		elements.forEach((el) => el.classList.add("visible"));
+		return;
+	}
 
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.08 });
+	const io = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((e) => {
+				if (e.isIntersecting) {
+					e.target.classList.add("visible");
+					io.unobserve(e.target);
+				}
+			});
+		},
+		{ threshold: 0.08 },
+	);
 
-  elements.forEach(el => io.observe(el));
+	elements.forEach((el) => io.observe(el));
 
-  // Hard fallback — show everything after 800ms no matter what
-  setTimeout(() => {
-    elements.forEach(el => el.classList.add('visible'));
-  }, 800);
+	// Hard fallback — show everything after 800ms no matter what
+	setTimeout(() => {
+		elements.forEach((el) => el.classList.add("visible"));
+	}, 800);
 }
 
 /* ── ANIMATED COUNTER (home stats) ─────────────────────────── */
 function animateCounter(el) {
-  const target = parseInt(el.dataset.target, 10);
-  const duration = 1400;
-  const step = target / (duration / 16);
-  let current = 0;
-  const timer = setInterval(() => {
-    current = Math.min(current + step, target);
-    el.textContent = Math.floor(current) + (el.dataset.suffix || '');
-    if (current >= target) clearInterval(timer);
-  }, 16);
+	const target = parseInt(el.dataset.target, 10);
+	const duration = 1400;
+	const step = target / (duration / 16);
+	let current = 0;
+	const timer = setInterval(() => {
+		current = Math.min(current + step, target);
+		el.textContent = Math.floor(current) + (el.dataset.suffix || "");
+		if (current >= target) clearInterval(timer);
+	}, 16);
 }
 
 function initCounters() {
-  const counters = document.querySelectorAll('[data-target]');
-  if (!counters.length) return;
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target);
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  counters.forEach(c => io.observe(c));
+	const counters = document.querySelectorAll("[data-target]");
+	if (!counters.length) return;
+	const io = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((e) => {
+				if (e.isIntersecting) {
+					animateCounter(e.target);
+					io.unobserve(e.target);
+				}
+			});
+		},
+		{ threshold: 0.5 },
+	);
+	counters.forEach((c) => io.observe(c));
 }
 
 /* ── INIT ───────────────────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', () => {
-  renderFooter();
-  initNavbar();
-  initHamburger();
-  setActiveNav();
-  initAnimations();
-  initCounters();
+document.addEventListener("DOMContentLoaded", () => {
+	renderFooter();
+	initNavbar();
+	initHamburger();
+	setActiveNav();
+	initAnimations();
+	initCounters();
 });
+
+const countdown = document.getElementById("countdown");
+
+if (countdown) {
+	let seconds = 3;
+
+	const timer = setInterval(() => {
+		seconds--;
+
+		countdown.textContent = seconds;
+
+		if (seconds === 0) {
+      clearInterval(timer);
+			window.location.href = "./home.html";
+		}
+    console.log("Successfully redirected to Your Portfolio")
+	}, 1000);
+}
+
+
+if (!sessionStorage.getItem("loaded")) {
+    sessionStorage.setItem("loaded", "true");
+
+    let seconds = 3;
+    const countdown = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+        seconds--;
+        countdown.textContent = seconds;
+
+        if (seconds === 0) {
+            clearInterval(timer);
+            window.location.replace("home.html");
+        }
+    }, 1000);
+}
+
+
+// const reloadingpage = performance.getEntriesByType("navigation");
+//   if (reloadingpage.length > 0 && reloadingpage[0].type === "reload") {
+//     window.location.href = "index.html";
+//   }
